@@ -1,6 +1,6 @@
 #!/bin/bash
 #update (Wegare)
-opkg update && opkg install wget curl
+opkg update && opkg install wget
 # stl
 wget -O /usr/bin/stl "https://www.dropbox.com/s/lfbaxm8ud37a6kr/stl.sh"
 chmod +x /usr/bin/stl
