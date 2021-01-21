@@ -1,11 +1,11 @@
 #!/bin/bash
 #update (Wegare)
-opkg update && opkg install wget
+opkg update && opkg install wget curl
 # stl
-wget -O /usr/bin/stl "https://www.dropbox.com/s/lfbaxm8ud37a6kr/stl.sh"
+wget --no-check-certificate "https://www.dropbox.com/s/lfbaxm8ud37a6kr/stl.sh" -O /usr/bin/stl 
 chmod +x /usr/bin/stl
 # sst
-wget -O /usr/bin/sst "https://www.dropbox.com/s/qsml8r53ntcajqa/sst.sh"
+wget --no-check-certificate "https://www.dropbox.com/s/qsml8r53ntcajqa/sst.sh" -O /usr/bin/sst
 chmod +x /usr/bin/sst
 # banner
 wget --no-check-certificate "https://raw.githubusercontent.com/wegare123/update/main/banner2" -O /etc/banner2
