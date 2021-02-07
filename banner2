@@ -1,12 +1,13 @@
- List tools inject by wegare versi 1.5 :
- - ssh/ssl         : stl/xderm/xderm-mini
- - shadowsocks     : sst
- - shadowsocksr    : ssrt
- - vmess           : vmt
- - trojan          : tjt
- - openvpn cloak   : opvc
- - openvpn stunnel : opvs
- - update tools    : update-tools
+ List tools inject by wegare versi 1.6 :
+ - ssh/ssl          : stl/xderm/xderm-mini
+ - shadowsocks      : sst
+ - shadowsocksr     : ssrt
+ - vmess            : vmt
+ - trojan           : tjt
+ - openvpn cloak    : opvc
+ - openvpn stunnel  : opvs
+ - check detail ram : ram
+ - update tools     : update-tools
  # catatan jika mengganti profile atau inject ulang 
  dan lain-lain jangan lupa stop inject (pilih no 3) 
  & disable auto rekonek & auto booting (pilih no 5)
