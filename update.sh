@@ -63,6 +63,9 @@ wget --no-check-certificate "https://raw.githubusercontent.com/wegare123/sstp/ma
 wget --no-check-certificate "https://raw.githubusercontent.com/wegare123/sstp/main/autorekonek-sstp.sh" -O /usr/bin/autorekonek-sstp
 chmod +x /usr/bin/sstp
 chmod +x /usr/bin/autorekonek-sstp
+# speedtest
+wget --no-check-certificate "https://raw.githubusercontent.com/wegare123/speedtest/main/speedtest_cli.py" -O /usr/bin/speedtest 
+chmod +x /usr/bin/speedtest
 # ket
 echo "KHUSUS SSTP"
 echo "Pastikan firewall forwardnya accept"

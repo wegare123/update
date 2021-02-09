@@ -1,4 +1,4 @@
- List tools inject by wegare versi 1.6.1 :
+ List tools inject by wegare versi 1.6.2 :
  - ssh/ssl          : stl/xderm/xderm-mini
  - shadowsocks      : sst
  - shadowsocksr     : ssrt
@@ -8,6 +8,7 @@
  - openvpn stunnel  : opvs
  - sstp             : sstp
  - check detail ram : ram
+ - check speed      : speedtest
  - update tools     : update-tools
  # catatan jika mengganti profile atau inject ulang 
  dan lain-lain jangan lupa stop inject (pilih no 3) 
