@@ -7,7 +7,18 @@ echo > /dev/null
 else
 opkg install sstp-client pptpd fping
 fi
-opkg install wget curl
+if [[ $cek == *"kmod-tcp-bbr"* ]]; then
+echo > /dev/null
+else
+opkg install kmod-tcp-bbr
+cat <<EOF> /etc/sysctl.conf
+# Do not edit, changes to this file will be lost on upgrades
+# /etc/sysctl.conf can be used to customize sysctl settings
+
+net.ipv4.tcp_congestion_control=bbr
+net.core.default_qdisc=fq
+EOF
+fi
 # stl
 wget --no-check-certificate "https://raw.githubusercontent.com/wegare123/stl/main/stl/stl.sh" -O /usr/bin/stl
 wget --no-check-certificate "https://raw.githubusercontent.com/wegare123/stl/main/stl/gproxy.sh" -O /usr/bin/gproxy
