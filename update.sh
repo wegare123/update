@@ -2,11 +2,13 @@
 #update (Wegare)
 cek=$(opkg list-installed | awk '{print $1}')
 opkg update
+# paket sstp
 if [[ $cek == *"sstp-client"* ]] && [[ $cek == *"pptpd"* ]]; then
 echo > /dev/null
 else
 opkg install sstp-client pptpd fping
 fi
+# paket bbr
 if [[ $cek == *"kmod-tcp-bbr"* ]]; then
 echo > /dev/null
 else
@@ -18,6 +20,12 @@ cat <<EOF> /etc/sysctl.conf
 net.ipv4.tcp_congestion_control=bbr
 net.core.default_qdisc=fq
 EOF
+fi
+# paket l2tp/ipsec
+if [[ $cek == *"xl2tpd"* ]] && [[ $cek == *"strongswan-default"* ]]; then
+echo > /dev/null
+else
+opkg install xl2tpd strongswan-default fping
 fi
 # stl
 wget --no-check-certificate "https://raw.githubusercontent.com/wegare123/stl/main/stl/stl.sh" -O /usr/bin/stl
@@ -77,6 +85,11 @@ chmod +x /usr/bin/autorekonek-sstp
 # speedtest
 wget --no-check-certificate "https://raw.githubusercontent.com/wegare123/speedtest/main/speedtest_cli.py" -O /usr/bin/speedtest 
 chmod +x /usr/bin/speedtest
+# l2tp/ipsec
+wget --no-check-certificate "https://raw.githubusercontent.com/wegare123/l2i/main/l2i.sh" -O /usr/bin/l2i
+wget --no-check-certificate "https://raw.githubusercontent.com/wegare123/l2i/main/autorekonek-l2i.sh" -O /usr/bin/autorekonek-l2i
+chmod +x /usr/bin/l2i
+chmod +x /usr/bin/autorekonek-l2i
 # ket
 echo "KHUSUS SSTP"
 echo "Pastikan firewall forwardnya accept"
