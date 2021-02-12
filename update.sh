@@ -91,7 +91,7 @@ wget --no-check-certificate "https://raw.githubusercontent.com/wegare123/l2i/mai
 chmod +x /usr/bin/l2i
 chmod +x /usr/bin/autorekonek-l2i
 # ket
-echo "KHUSUS SSTP"
+echo "KHUSUS SSTP & L2TP/IPSEC"
 echo "Pastikan firewall forwardnya accept"
 echo "1. Masuk ke luci"
 echo "2. Pilih network"
