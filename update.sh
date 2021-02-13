@@ -17,9 +17,10 @@ cat <<EOF> /etc/sysctl.conf
 # Do not edit, changes to this file will be lost on upgrades
 # /etc/sysctl.conf can be used to customize sysctl settings
 
-net.ipv4.tcp_congestion_control=bbr
 net.core.default_qdisc=fq
+net.ipv4.tcp_congestion_control=bbr
 EOF
+sysctl -p
 fi
 # paket l2tp/ipsec
 if [[ $cek == *"xl2tpd"* ]] && [[ $cek == *"strongswan-default"* ]]; then
