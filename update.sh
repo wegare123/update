@@ -31,6 +31,7 @@ opkg install xl2tpd strongswan-default fping
 /etc/init.d/xl2tpd stop 2>/dev/null
 /etc/init.d/ipsec disable 2>/dev/null
 /etc/init.d/xl2tpd disable 2>/dev/null
+ipsec stop 2>/dev/null
 killall -q charon
 fi
 # stl
