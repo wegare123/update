@@ -34,6 +34,13 @@ opkg install xl2tpd strongswan-default fping
 ipsec stop 2>/dev/null
 killall -q charon
 fi
+#paket xray
+if [[ $cek == *"openwrt-xray"* ]]; then
+echo > /dev/null
+else
+wget --no-check-certificate "https://github.com/wegare123/vless/blob/main/openwrt-xray_1.3.0-1_aarch64_cortex-a53.ipk?raw=true" -O ~/xray.ipk
+opkg install *.ipk fping
+fi
 # stl
 wget --no-check-certificate "https://raw.githubusercontent.com/wegare123/stl/main/stl/stl.sh" -O /usr/bin/stl
 wget --no-check-certificate "https://raw.githubusercontent.com/wegare123/stl/main/stl/gproxy.sh" -O /usr/bin/gproxy
@@ -97,6 +104,11 @@ wget --no-check-certificate "https://raw.githubusercontent.com/wegare123/l2i/mai
 wget --no-check-certificate "https://raw.githubusercontent.com/wegare123/l2i/main/autorekonek-l2i.sh" -O /usr/bin/autorekonek-l2i
 chmod +x /usr/bin/l2i
 chmod +x /usr/bin/autorekonek-l2i
+# vless
+wget --no-check-certificate "https://raw.githubusercontent.com/wegare123/vless/main/vless.sh" -O /usr/bin/vless
+wget --no-check-certificate "https://raw.githubusercontent.com/wegare123/vless/main/autorekonek-vless.sh" -O /usr/bin/autorekonek-vless
+chmod +x /usr/bin/vless
+chmod +x /usr/bin/autorekonek-vless
 # ket
 echo "KHUSUS SSTP & L2TP/IPSEC"
 echo "Pastikan firewall forwardnya accept"

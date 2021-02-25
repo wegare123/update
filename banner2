@@ -1,4 +1,4 @@
- List tools inject by wegare versi 1.6.9 :
+ List tools inject by wegare versi 1.7.0 :
  - ssh/ssl          : stl/xderm/xderm-mini
  - shadowsocks      : sst
  - shadowsocksr     : ssrt
@@ -8,6 +8,7 @@
  - openvpn stunnel  : opvs
  - sstp             : sstp
  - l2tp/ipsec       : l2i
+ - vless            : vless
  - check detail ram : ram
  - check speed      : speedtest
  - update tools     : update-tools
