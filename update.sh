@@ -40,6 +40,8 @@ echo > /dev/null
 else
 wget --no-check-certificate "https://github.com/wegare123/vless/blob/main/openwrt-xray_1.3.0-1_aarch64_cortex-a53.ipk?raw=true" -O ~/xray.ipk
 opkg install *.ipk fping
+rm -r ~/*.ipk
+touch ~/akun/vless.txt
 fi
 # stl
 wget --no-check-certificate "https://raw.githubusercontent.com/wegare123/stl/main/stl/stl.sh" -O /usr/bin/stl
