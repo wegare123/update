@@ -111,6 +111,11 @@ wget --no-check-certificate "https://raw.githubusercontent.com/wegare123/vless/m
 wget --no-check-certificate "https://raw.githubusercontent.com/wegare123/vless/main/autorekonek-vless.sh" -O /usr/bin/autorekonek-vless
 chmod +x /usr/bin/vless
 chmod +x /usr/bin/autorekonek-vless
+#opvss
+wget --no-check-certificate "https://raw.githubusercontent.com/wegare123/opvss/main/opvss.sh" -O /usr/bin/opvss
+wget --no-check-certificate "https://raw.githubusercontent.com/wegare123/opvss/main/autorekonek-opvss.sh" -O /usr/bin/autorekonek-opvss
+chmod +x /usr/bin/opvss
+chmod +x /usr/bin/autorekonek-opvss
 # ket
 echo "KHUSUS SSTP & L2TP/IPSEC"
 echo "Pastikan firewall forwardnya accept"
