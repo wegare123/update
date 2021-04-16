@@ -99,7 +99,7 @@ wget --no-check-certificate "https://raw.githubusercontent.com/wegare123/sstp/ma
 chmod +x /usr/bin/sstp
 chmod +x /usr/bin/autorekonek-sstp
 # speedtest
-wget --no-check-certificate "https://raw.githubusercontent.com/wegare123/speedtest/main/speedtest_cli.py" -O /usr/bin/speedtest 
+wget --no-check-certificate "https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py" -O /usr/bin/speedtest 
 chmod +x /usr/bin/speedtest
 # l2tp/ipsec
 wget --no-check-certificate "https://raw.githubusercontent.com/wegare123/l2i/main/l2i.sh" -O /usr/bin/l2i
