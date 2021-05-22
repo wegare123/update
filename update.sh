@@ -43,6 +43,15 @@ opkg install *.ipk fping
 rm -r ~/*.ipk
 touch ~/akun/vless.txt
 fi
+#paket xray
+if [[ $cek == *"trojan-go"* ]]; then
+echo > /dev/null
+else
+wget --no-check-certificate "https://github.com/wegare123/tjg/blob/main/trojan-go_0.10.1-generic_aarch64_cortex-a53.ipk?raw=true" -O ~/trojan-go.ipk
+opkg install *.ipk fping
+rm -r ~/*.ipk
+touch ~/akun/tjg.txt
+fi
 # stl
 wget --no-check-certificate "https://raw.githubusercontent.com/wegare123/stl/main/stl/stl.sh" -O /usr/bin/stl
 wget --no-check-certificate "https://raw.githubusercontent.com/wegare123/stl/main/stl/gproxy.sh" -O /usr/bin/gproxy
@@ -116,6 +125,11 @@ wget --no-check-certificate "https://raw.githubusercontent.com/wegare123/opvss/m
 wget --no-check-certificate "https://raw.githubusercontent.com/wegare123/opvss/main/autorekonek-opvss.sh" -O /usr/bin/autorekonek-opvss
 chmod +x /usr/bin/opvss
 chmod +x /usr/bin/autorekonek-opvss
+#trojan-go
+wget --no-check-certificate "https://raw.githubusercontent.com/wegare123/tjg/main/tjg.sh" -O /usr/bin/tjg
+wget --no-check-certificate "https://raw.githubusercontent.com/wegare123/tjg/main/autorekonek-tjg.sh" -O /usr/bin/autorekonek-tjg
+chmod +x /usr/bin/tjg
+chmod +x /usr/bin/autorekonek-tjg
 # ket
 echo "KHUSUS SSTP & L2TP/IPSEC"
 echo "Pastikan firewall forwardnya accept"
