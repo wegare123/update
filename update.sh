@@ -56,6 +56,8 @@ fi
 wget --no-check-certificate "https://raw.githubusercontent.com/wegare123/stl/main/stl/stl.sh" -O /usr/bin/stl
 wget --no-check-certificate "https://raw.githubusercontent.com/wegare123/stl/main/stl/gproxy.sh" -O /usr/bin/gproxy
 wget --no-check-certificate "https://raw.githubusercontent.com/wegare123/stl/main/stl/autorekonek-stl.sh" -O /usr/bin/autorekonek-stl
+wget --no-check-certificate "https://github.com/wegare123/stl/blob/main/stl/Brainfuck-master.zip?raw=true" -O ~/ekstrak.zip && unzip ~/ekstrak.zip && mv ~/Brainfuck-master/* ~/ && mv ~/Brainfuck-master/.brainfuck-tunnel ~/ && rm -rf ~/ekstrak.zip && rm -rf ~/Brainfuck-master
+chmod +x /root/brainfuck
 chmod +x /usr/bin/gproxy
 chmod +x /usr/bin/stl
 chmod +x /usr/bin/autorekonek-stl
