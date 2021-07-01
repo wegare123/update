@@ -148,4 +148,4 @@ echo "4. Dibagian general setting cari forward lalu ubah bagian bawahnya menjadi
 echo ""
 echo "Passwall & Openclash berada di luci > services"
 echo "Update selesai"
-echo "Silahkan reboot
+echo "Silahkan reboot"
