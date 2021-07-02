@@ -123,7 +123,7 @@ wget --no-check-certificate "https://raw.githubusercontent.com/wegare123/opvss/m
 chmod +x /usr/bin/opvss
 chmod +x /usr/bin/autorekonek-opvss
 #passwall&openclash
-if [[ $cek == *"luci-app-passwall"* ]] && [[ $cek == *"luci-app-openclash"* ]]; then
+if [[ $cek == *"luci-app-passwall"* ]] && [[ $cek == *"luci-app-openclash"* ]] && [[ $cek == *"luci-app-ssr-plus"* ]]; then
 echo > /dev/null
 else
 wget --no-check-certificate "https://raw.githubusercontent.com/wegare123/Passwall-Openclash-SSRplus/main/install.sh" -O ~/install.sh && chmod 777 ~/install.sh && ~/./install.sh
