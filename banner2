@@ -1,4 +1,4 @@
- List tools inject by wegare versi 1.7.8 :
+ List tools inject by wegare versi 1.7.7 :
  - ssh/ssl             : stl/xderm/xderm-mini
  - shadowsocks         : sst
  - shadowsocksr        : ssrt
@@ -14,8 +14,6 @@
  - check detail ram    : ram
  - check speed         : speedtest
  - update tools        : update-tools
- - passwall > luci > services
- - openclash > luci > services
  # catatan jika mengganti profile atau inject ulang 
  dan lain-lain jangan lupa stop inject (pilih no 3) 
  & disable auto rekonek & auto booting (pilih no 5)

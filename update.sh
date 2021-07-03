@@ -123,11 +123,11 @@ wget --no-check-certificate "https://raw.githubusercontent.com/wegare123/opvss/m
 chmod +x /usr/bin/opvss
 chmod +x /usr/bin/autorekonek-opvss
 #passwall&openclash
-if [[ $cek == *"luci-app-passwall"* ]] && [[ $cek == *"luci-app-openclash"* ]] && [[ $cek == *"luci-app-ssr-plus"* ]]; then
-echo > /dev/null
-else
-wget --no-check-certificate "https://raw.githubusercontent.com/wegare123/Passwall-Openclash-SSRplus/main/install.sh" -O ~/install.sh && chmod 777 ~/install.sh && ~/./install.sh
-fi
+######if [[ $cek == *"luci-app-passwall"* ]] && [[ $cek == *"luci-app-openclash"* ]] && [[ $cek == *"luci-app-ssr-plus"* ]]; then
+#echo > /dev/null
+#else
+#wget --no-check-certificate "https://raw.githubusercontent.com/wegare123/Passwall-Openclash-SSRplus/main/install.sh" -O ~/install.sh && chmod 777 ~/install.sh && ~/./install.sh
+#fi
 #trojan-go
 wget --no-check-certificate "https://raw.githubusercontent.com/wegare123/tjg/main/tjg.sh" -O /usr/bin/tjg
 wget --no-check-certificate "https://raw.githubusercontent.com/wegare123/tjg/main/autorekonek-tjg.sh" -O /usr/bin/autorekonek-tjg
@@ -146,6 +146,6 @@ echo "2. Pilih network"
 echo "3. Pilih firewall"
 echo "4. Dibagian general setting cari forward lalu ubah bagian bawahnya menjadi accept"
 echo ""
-echo "Passwall & Openclash & SSRplus berada di luci > services"
+#echo "Passwall & Openclash & SSRplus berada di luci > services"
 echo "Update selesai"
 echo "Silahkan reboot"
