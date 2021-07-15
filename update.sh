@@ -35,12 +35,18 @@ ipsec stop 2>/dev/null
 killall -q charon
 fi
 #paket xray
-if [[ $cek == *"openwrt-xray"* ]]; then
+cekbin=$(ls /usr/bin)
+if [[ $cekbin == *"xray"* ]]; then
 echo > /dev/null
 else
-wget --no-check-certificate "https://github.com/wegare123/vless/blob/main/openwrt-xray_1.3.0-1_aarch64_cortex-a53.ipk?raw=true" -O ~/xray.ipk
-opkg install *.ipk fping
-rm -r ~/*.ipk
+mkdir -p /usr/share/xray/
+wget --no-check-certificate "https://github.com/wegare123/vless/blob/main/xray?raw=true" -O /usr/bin/xray
+wget --no-check-certificate "https://raw.githubusercontent.com/wegare123/vmt/main/geoip.dat" -O /usr/share/xray/geoip.dat
+wget --no-check-certificate "https://raw.githubusercontent.com/wegare123/vmt/main/geosite.dat" -O /usr/share/xray/geosite.dat
+chmod +x /usr/bin/xray
+chmod +x /usr/share/xray/geoip.dat
+chmod +x /usr/share/xray/geosite.dat
+opkg install fping
 touch ~/akun/vless.txt
 fi
 #paket xray
