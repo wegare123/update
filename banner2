@@ -1,4 +1,4 @@
- List tools inject by wegare versi 1.8.0 :
+ List tools inject by wegare versi 1.8.1 :
  - ssh/ssl             : stl/xderm/xderm-mini
  - shadowsocks         : sst
  - shadowsocksr        : ssrt
@@ -14,8 +14,4 @@
  - check detail ram    : ram
  - check speed         : speedtest
  - update tools        : update-tools
- # catatan jika mengganti profile atau inject ulang 
- dan lain-lain jangan lupa stop inject (pilih no 3) 
- & disable auto rekonek & auto booting (pilih no 5)
- terlebih dahulu agar tidak bentrok
  -----------------------------------------------------
