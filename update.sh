@@ -73,6 +73,7 @@ chmod +x /root/akun/tunnel.py
 chmod +x /root/akun/ssh.py
 chmod +x /root/akun/inject.py
 chmod +x /usr/bin/autorekonek-stl
+touch ~/akun/ipmodem.txt 
 # opvc
 wget --no-check-certificate "https://raw.githubusercontent.com/wegare123/opvc/main/opvc.sh" -O /usr/bin/opvc
 wget --no-check-certificate "https://raw.githubusercontent.com/wegare123/opvc/main/autorekonek-opvc.sh" -O /usr/bin/autorekonek-opvc
