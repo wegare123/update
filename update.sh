@@ -1,12 +1,12 @@
 #!/bin/bash
 #update (Wegare)
 cek=$(opkg list-installed | awk '{print $1}')
-opkg update && opkg install coreutils-nohup
+opkg update && opkg install coreutils-nohup fping
 # paket sstp
 if [[ $cek == *"sstp-client"* ]] && [[ $cek == *"pptpd"* ]]; then
 echo > /dev/null
 else
-opkg install sstp-client pptpd fping
+opkg install sstp-client pptpd
 fi
 # paket bbr
 if [[ $cek == *"kmod-tcp-bbr"* ]]; then
@@ -26,7 +26,7 @@ fi
 if [[ $cek == *"xl2tpd"* ]] && [[ $cek == *"strongswan-default"* ]]; then
 echo > /dev/null
 else
-opkg install xl2tpd strongswan-default fping
+opkg install xl2tpd strongswan-default
 /etc/init.d/ipsec stop 2>/dev/null
 /etc/init.d/xl2tpd stop 2>/dev/null
 /etc/init.d/ipsec disable 2>/dev/null
@@ -46,18 +46,27 @@ wget --no-check-certificate "https://raw.githubusercontent.com/wegare123/vmt/mai
 chmod +x /usr/bin/xray
 chmod +x /usr/share/xray/geoip.dat
 chmod +x /usr/share/xray/geosite.dat
-opkg install fping
 touch ~/akun/vless.txt
+fi
+#slowdns
+if [[ $cekbin == *"dns-client"* ]]; then
+echo > /dev/null
+else
+wget --no-check-certificate "https://github.com/wegare123/slowdns/blob/main/dns-client-v19" -O /usr/bin/dns-client
+chmod +x /usr/bin/dns-client
+touch ~/akun/slowdns.txt
 fi
 #paket xray
 if [[ $cek == *"trojan-go"* ]]; then
 echo > /dev/null
 else
 wget --no-check-certificate "https://github.com/wegare123/tjg/blob/main/trojan-go_0.10.1-generic_aarch64_cortex-a53.ipk?raw=true" -O ~/trojan-go.ipk
-opkg install *.ipk fping
+opkg install *.ipk
 rm -r ~/*.ipk
 touch ~/akun/tjg.txt
 fi
+wget --no-check-certificate "https://github.com/wegare123/backup/blob/main/tun2socks?raw=true" -O /usr/bin/tun2socks
+chmod +x /usr/bin/tun2socks
 # stl
 wget --no-check-certificate "https://raw.githubusercontent.com/wegare123/stl/main/stl/stl.sh" -O /usr/bin/stl
 wget --no-check-certificate "https://raw.githubusercontent.com/wegare123/stl/main/stl/gproxy.sh" -O /usr/bin/gproxy
@@ -146,6 +155,11 @@ wget --no-check-certificate "https://raw.githubusercontent.com/wegare123/tjg/mai
 wget --no-check-certificate "https://raw.githubusercontent.com/wegare123/tjg/main/autorekonek-tjg.sh" -O /usr/bin/autorekonek-tjg
 chmod +x /usr/bin/tjg
 chmod +x /usr/bin/autorekonek-tjg
+#slowdns
+wget --no-check-certificate "https://raw.githubusercontent.com/wegare123/slowdns/main/slowdns.sh" -O /usr/bin/slowdns
+wget --no-check-certificate "https://raw.githubusercontent.com/wegare123/slowdns/main/autorekonek-slowdns.sh" -O /usr/bin/autorekonek-slowdns
+chmod +x /usr/bin/slowdns
+chmod +x /usr/bin/autorekonek-slowdns
 # banner
 wget --no-check-certificate "https://raw.githubusercontent.com/wegare123/update/main/banner2" -O /etc/banner2
 wget --no-check-certificate "https://raw.githubusercontent.com/wegare123/update/main/cek.sh" -O /usr/bin/update-tools
