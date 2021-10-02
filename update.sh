@@ -1,7 +1,7 @@
 #!/bin/bash
 #update (Wegare)
 cek=$(opkg list-installed | awk '{print $1}')
-opkg update && opkg install coreutils-nohup fping
+opkg update && opkg install coreutils-nohup fping httping
 # paket sstp
 if [[ $cek == *"sstp-client"* ]] && [[ $cek == *"pptpd"* ]]; then
 echo > /dev/null
