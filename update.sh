@@ -56,6 +56,13 @@ wget --no-check-certificate "https://github.com/wegare123/slowdns/blob/main/dns-
 chmod +x /usr/bin/dns-client
 touch ~/akun/slowdns.txt
 fi
+#paket tun2socks
+if [[ $cekbin == *"tun2socks"* ]]; then
+echo > /dev/null
+else
+wget --no-check-certificate "https://github.com/wegare123/backup/blob/main/tun2socks?raw=true" -O /usr/bin/tun2socks
+chmod +x /usr/bin/tun2socks
+fi
 #paket xray
 if [[ $cek == *"trojan-go"* ]]; then
 echo > /dev/null
@@ -160,6 +167,11 @@ wget --no-check-certificate "https://raw.githubusercontent.com/wegare123/slowdns
 wget --no-check-certificate "https://raw.githubusercontent.com/wegare123/slowdns/main/autorekonek-slowdns.sh" -O /usr/bin/autorekonek-slowdns
 chmod +x /usr/bin/slowdns
 chmod +x /usr/bin/autorekonek-slowdns
+#dnstt
+wget --no-check-certificate "https://raw.githubusercontent.com/wegare123/dnstt/main/dnstt.sh" -O /usr/bin/dnstt
+wget --no-check-certificate "https://raw.githubusercontent.com/wegare123/dnstt/main/autorekonek-dnstt.sh" -O /usr/bin/autorekonek-dnstt
+chmod +x /usr/bin/dnstt
+chmod +x /usr/bin/autorekonek-dnstt
 # banner
 wget --no-check-certificate "https://raw.githubusercontent.com/wegare123/update/main/banner2" -O /etc/banner2
 wget --no-check-certificate "https://raw.githubusercontent.com/wegare123/update/main/cek.sh" -O /usr/bin/update-tools
